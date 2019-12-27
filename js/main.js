@@ -14,9 +14,25 @@
 
     // footerContainer.load('footer.html');
 
+    var navigationLink = $('.navigation').find('a');
+    // console.log(navigationLink);
+    var active = 0;
+
+    navigationLink.click(function(ev) {
+        var target = $(this).attr('data-target');
+        var index = $(this).parent().index();
+        var offset = Math.abs(index - active);
+        // console.log(offset);
+        $('html, body').animate({
+            'scroll-top': $(target).offset().top
+        }, 500 * offset
+        );
+        active = index;
+    });
+
     $('#contact-form').on('submit', function(event) {
         event.preventDefault();
-        let user = {
+        var user = {
             name    : $('#name').val(),
             lastName: $('#lastname').val(),
             email   : $('#email').val(),
