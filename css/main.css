@@ -1,10 +1,8 @@
 *:focus {
-  outline: none !important;
+  outline: none;
 }
 * {
   margin: 0;
-  -webkit-print-color-adjust: exact !important;
-  color-adjust: exact !important;
 }
 html {
   box-sizing: border-box;
@@ -97,12 +95,6 @@ a:active {
   width: 100%;
   height: auto;
 }
-@media (min-width: 1600px) {
-  .container {
-    width: 1570px;
-    max-width: 1570px;
-  }
-}
 /* Large Devices, Wide Screens */
 @media only screen and (max-width: 1200px) {
   .media-checker {
@@ -131,18 +123,6 @@ a:active {
 @media only screen and (max-width: 767px) {
   .media-checker {
     z-index: 767;
-  }
-}
-/* Small Devices, Tablets */
-@media only screen and (max-width: 567px) {
-  .media-checker {
-    z-index: 567;
-  }
-}
-/* Small Devices, Tablets */
-@media only screen and (max-width: 566px) {
-  .media-checker {
-    z-index: 566;
   }
 }
 /* Extra Small Devices, Phones */
@@ -307,8 +287,57 @@ body {
   padding: 0 10px;
 }
 .center-wrapper .products {
-  background-color: purple;
-  height: 200px;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+}
+.center-wrapper .products .products-text-container {
+  margin-bottom: 100px;
+}
+.center-wrapper .products .products-text-container .title {
+  text-transform: uppercase;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  margin: 0;
+  align-self: center;
+  order: 1;
+  margin-bottom: 100px;
+}
+.center-wrapper .products .products-text-container .title:before {
+  border-top: 1px solid #333;
+  content: "";
+  margin: 0 auto;
+  position: absolute;
+  top: 38%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+.center-wrapper .products .products-text-container .title span {
+  background: #fff;
+  padding: 0 25px;
+}
+.center-wrapper .products .products-content-container {
+  display: flex;
+  order: 2;
+  align-self: center;
+  align-items: center;
+  text-align: center;
+}
+.center-wrapper .products .products-content-container:last-child {
+  margin-bottom: 198px;
+}
+.center-wrapper .products .products-content-container .products-row .product {
+  margin: 0 95px 46px 96px;
+}
+.center-wrapper .products .products-content-container .products-row .product:first-child {
+  margin-left: 65px !important;
+}
+.center-wrapper .products .products-content-container .products-row .product:last-child {
+  margin-right: 65px !important;
 }
 .center-wrapper .gallery {
   display: flex;
