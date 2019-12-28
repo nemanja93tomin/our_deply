@@ -41,7 +41,7 @@ body {
   .navigation {
     padding-top: 15px;
     padding-left: 20px;
-    height: 290px;
+    margin-bottom: 205px;
     ul {
       display: flex;
       list-style: none;
@@ -57,12 +57,15 @@ body {
             color: @main-text-color;
           }
           &:hover, &:focus, &:active {
-            //color: darken(@main-text-color, 50%);
             border-bottom: 2px solid @main-text-color;
           }
         }
       }
     }
+  }
+
+  #form-navigation{
+    margin-bottom: 50px;
   }
 
   .bespoke {
@@ -525,15 +528,18 @@ body {
         .footer-social {
           flex-grow: 1;
           text-align: right;
-          i {
-            font-size: 49px;
-            line-height: 42px;
+          a{
             margin-left: 20px;
-            color: #fff;
-            &:hover, &:focus, &:active {
-              color: lighten(@main-text-color, 30%);
+            i {
+              font-size: 49px;
+              line-height: 42px;
+              color: #fff;
+              &:hover, &:focus, &:active {
+                color: lighten(@main-text-color, 30%);
+              }
             }
           }
+
         }
       }
       .payment {
@@ -612,6 +618,12 @@ body {
 @media only screen and (max-width: 767px) {
 
   .center-wrapper {
+    .navigation{
+      display: flex;
+      justify-content: center;
+      padding-left: 0;
+    }
+
     .bespoke {
       .text-container-1 {
         font-size: 25px !important;
@@ -688,6 +700,25 @@ body {
     }
   }
 
+  .footer{
+    .center-wrapper{
+      .footer-wrapper{
+        .footer-inner{
+          flex-direction: column;
+          align-items: center;
+          margin-top: 50px;
+          .footer-img{
+            margin-bottom: 40px;
+          }
+          .footer-menu{
+            flex-grow: 1;
+            margin-bottom: 40px;
+          }
+        }
+      }
+    }
+  }
+
 }
 
 /* Extra Small Devices, Phones */
@@ -698,6 +729,46 @@ body {
 
   .center-wrapper {
     width: 100%;
+    .navigation{
+      ul{
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        .menu-line{
+          display: none;
+        }
+        li{
+          width: 100%;
+          text-align: center;
+          border-top: 1px solid @main-text-color;
+          border-bottom: 1px solid @main-text-color;
+          padding: 0;
+          &:first-child{
+            border-bottom: none;
+          }
+          &:last-child{
+            border-top: none;
+          }
+          a{
+            display: block;
+            padding: 15px 0;
+            &:link, &:visited {
+
+            }
+            &:hover, &:focus, &:active {
+              border-bottom: none;
+              color: #fff;
+            }
+          }
+          &:link, &:visited {
+
+          }
+          &:hover, &:focus, &:active {
+            background-color: @main-text-color;
+          }
+        }
+      }
+    }
 
     .about {
       .article-content {
@@ -721,6 +792,31 @@ body {
       .download-wrapper,
       .mail-wrapper {
         padding: 0;
+      }
+    }
+  }
+
+  .footer{
+    .center-wrapper{
+      .footer-wrapper{
+        .footer-inner{
+          .footer-img{
+          }
+          .footer-menu{
+            ul{
+              li{
+                a{
+                  font-size: 18px;
+                }
+              }
+            }
+          }
+          .footer-social{
+            i{
+              font-size: 40px;
+            }
+          }
+        }
       }
     }
   }
@@ -791,6 +887,54 @@ body {
 
         p {
           font-size: 16px;
+        }
+      }
+    }
+  }
+
+  .footer{
+    .center-wrapper{
+      .footer-wrapper{
+        .footer-inner{
+          .footer-img{
+            padding: 0 10px;
+            img{
+              .img-responsive-fixed-aspect-ratio();
+            }
+          }
+          .footer-menu{
+            ul{
+              flex-direction: column;
+              li{
+                margin: 5px 0;
+                a{
+                  font-size: 18px;
+                }
+              }
+            }
+          }
+          .footer-social{
+            a{
+              margin-left: 0;
+              &:first-child{
+                margin-right: 10px;
+              }
+              &:last-child{
+                margin-left: 10px;
+              }
+            }
+          }
+        }
+        .payment{
+          flex-direction: column;
+          height: auto;
+          margin-top: 60px;
+          a{
+            margin-bottom: 20px;
+          }
+        }
+        .copyright{
+          text-align: center;
         }
       }
     }
