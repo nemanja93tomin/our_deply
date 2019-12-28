@@ -633,6 +633,10 @@ body {
   }
   .center-wrapper .about .article-content .icons .icons-wrapper .icons-inner {
     margin-right: 50px;
+    margin-top: 50px;
+  }
+  .center-wrapper .about .article-content .icons .icons-wrapper .icons-inner .icons-paragraph p {
+    margin-bottom: 20px;
   }
 }
 /*Ipad Landscape */
