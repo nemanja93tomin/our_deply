@@ -794,7 +794,10 @@ body {
   .center-wrapper .contact-form .contact-title h1 {
     display: flex;
     justify-content: center;
-    font-size: 26px;
+    font-size: 22px;
+  }
+  .center-wrapper .contact-form .contact-title .title span {
+    padding: 0 10px;
   }
   .center-wrapper .contact-form .contact-title p {
     font-size: 16px;
