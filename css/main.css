@@ -156,11 +156,18 @@ body {
   width: 1200px;
 }
 .hero {
-  height: 500px;
-  background-color: red;
+  display: flex;
+  background-image: url("../img/hero.jpg");
+  height: 780px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
 }
-.hero .center-wrapper .logo {
-  background-color: white;
+.hero .logo-container {
+  display: flex;
+  margin: 34px auto 0px !important;
+}
+.hero .logo-container .logo {
   height: 100px;
 }
 .center-wrapper .navigation {
