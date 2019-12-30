@@ -155,20 +155,39 @@ body {
   margin: auto;
   width: 1200px;
 }
+.title {
+  text-transform: uppercase;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  margin: 0;
+}
+.title:before {
+  border-top: 1px solid #333;
+  content: "";
+  margin: 0 auto;
+  position: absolute;
+  top: 38%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+.title span {
+  /* to hide the lines from behind the text, you have to set the background color the same as the container */
+  background: #fff;
+  padding: 0 25px;
+}
 .hero {
-  display: flex;
-  background-image: url("../img/hero.jpg");
-  height: 780px;
+  background-image: url("../img/hero-img.jpg");
   background-repeat: no-repeat;
+  background-position: center;
   background-size: cover;
-  background-position: bottom;
+  padding-bottom: 47%;
 }
-.hero .logo-container {
+.hero .center-wrapper .logo {
   display: flex;
-  margin: 34px auto 0px !important;
-}
-.hero .logo-container .logo {
-  height: 100px;
+  padding: 15px;
 }
 .center-wrapper .navigation {
   padding-top: 15px;
@@ -221,54 +240,33 @@ body {
 }
 .center-wrapper .bespoke .button-container {
   order: 3;
-  height: 65px;
-  width: 340px;
-  border: 1px solid #393835;
-  background-color: white;
-  padding: 0;
-  text-transform: uppercase;
-  font-size: 25px;
-  color: #333;
   display: flex;
-  align-items: center;
   justify-content: center;
+  font-size: 20px;
+  line-height: 120%;
+  width: 340px;
+  text-transform: uppercase;
+  border: 1px solid #333;
+  padding: 20px 0;
+}
+.center-wrapper .bespoke .button-container:link,
+.center-wrapper .bespoke .button-container:visited {
+  color: #333;
 }
 .center-wrapper .bespoke .button-container:hover,
 .center-wrapper .bespoke .button-container:focus,
 .center-wrapper .bespoke .button-container:active {
-  color: white;
-  background-color: #333333;
+  background-color: #484745;
+  color: #fff;
 }
 .center-wrapper .bespoke .text-container-2 {
   order: 4;
   font-size: 16px;
-  margin: 12px 0 0 0;
+  margin-top: 5px;
+  text-transform: uppercase;
 }
 .center-wrapper .about {
   display: flex;
-}
-.center-wrapper .about .title {
-  text-transform: uppercase;
-  text-align: center;
-  position: relative;
-  z-index: 1;
-  margin: 0;
-}
-.center-wrapper .about .title:before {
-  border-top: 1px solid #333;
-  content: "";
-  margin: 0 auto;
-  position: absolute;
-  top: 38%;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: -1;
-}
-.center-wrapper .about .title span {
-  /* to hide the lines from behind the text, you have to set the background color the same as the container */
-  background: #fff;
-  padding: 0 25px;
 }
 .center-wrapper .about .article-content {
   flex-direction: column;
@@ -323,55 +321,30 @@ body {
 .center-wrapper .products {
   display: flex;
   flex-direction: column;
-  margin: 0;
-  padding: 0;
+  margin-bottom: 200px;
 }
 .center-wrapper .products .products-text-container {
-  margin-bottom: 100px;
-}
-.center-wrapper .products .products-text-container .title {
-  text-transform: uppercase;
-  text-align: center;
-  position: relative;
-  z-index: 1;
-  margin: 0;
-  align-self: center;
-  order: 1;
-  margin-bottom: 100px;
-}
-.center-wrapper .products .products-text-container .title:before {
-  border-top: 1px solid #333;
-  content: "";
-  margin: 0 auto;
-  position: absolute;
-  top: 38%;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: -1;
-}
-.center-wrapper .products .products-text-container .title span {
-  background: #fff;
-  padding: 0 25px;
+  margin-bottom: 45px;
 }
 .center-wrapper .products .products-content-container {
   display: flex;
+  flex-direction: column;
   order: 2;
-  align-self: center;
   align-items: center;
   text-align: center;
+  padding: 0 120px;
 }
-.center-wrapper .products .products-content-container:last-child {
-  margin-bottom: 198px;
+.center-wrapper .products .products-content-container .products-row {
+  display: flex;
+  flex-direction: row;
+  margin-top: 45px;
 }
 .center-wrapper .products .products-content-container .products-row .product {
-  margin: 0 95px 46px 96px;
+  margin: 0 50px;
 }
-.center-wrapper .products .products-content-container .products-row .product:first-child {
-  margin-left: 65px !important;
-}
-.center-wrapper .products .products-content-container .products-row .product:last-child {
-  margin-right: 65px !important;
+.center-wrapper .products .products-content-container .products-row .product .name {
+  margin-top: 35px;
+  font-size: 20px;
 }
 .center-wrapper .gallery {
   display: flex;
@@ -379,40 +352,27 @@ body {
   margin: 0;
   padding: 0;
 }
-.center-wrapper .gallery .gallery-text-container .title {
-  text-transform: uppercase;
-  text-align: center;
-  position: relative;
-  z-index: 1;
-  margin: 0;
-  align-self: center;
-  order: 1;
-  margin-bottom: 100px;
-}
-.center-wrapper .gallery .gallery-text-container .title:before {
-  border-top: 1px solid #333;
-  content: "";
-  margin: 0 auto;
-  position: absolute;
-  top: 38%;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: -1;
-}
-.center-wrapper .gallery .gallery-text-container .title span {
-  background: #fff;
-  padding: 0 25px;
-}
 .center-wrapper .gallery .gallery-content-container {
   display: flex;
-  order: 2;
   flex-direction: column;
   align-items: center;
   text-align: center;
+  margin-top: 90px;
+  margin-bottom: 200px;
 }
-.center-wrapper .gallery .gallery-content-container:last-child {
-  margin-bottom: 198px;
+.center-wrapper .gallery .gallery-content-container .gallery-row {
+  display: flex;
+  margin-bottom: 4px;
+}
+.center-wrapper .gallery .gallery-content-container .gallery-row a {
+  margin-right: 4px;
+}
+.center-wrapper .gallery .gallery-content-container .gallery-row a img {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
 }
 .center-wrapper .call-to-action {
   display: flex;
@@ -452,29 +412,6 @@ body {
 }
 .center-wrapper .contact-form .contact-title {
   text-align: center;
-}
-.center-wrapper .contact-form .contact-title .title {
-  text-transform: uppercase;
-  text-align: center;
-  position: relative;
-  z-index: 1;
-  margin: 0;
-}
-.center-wrapper .contact-form .contact-title .title:before {
-  border-top: 1px solid #333;
-  content: "";
-  margin: 0 auto;
-  position: absolute;
-  top: 38%;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: -1;
-}
-.center-wrapper .contact-form .contact-title .title span {
-  /* to hide the lines from behind the text, you have to set the background color the same as the container */
-  background: #fff;
-  padding: 0 25px;
 }
 .center-wrapper .contact-form .contact-title p {
   font-size: 20px;
@@ -645,6 +582,24 @@ body {
   .center-wrapper .about .article-content .icons .icons-wrapper .icons-inner .icons-paragraph p {
     margin-bottom: 20px;
   }
+  .center-wrapper .gallery .gallery-content-container .gallery-row {
+    flex-direction: column;
+    margin-bottom: 0;
+  }
+  .center-wrapper .gallery .gallery-content-container .gallery-row a {
+    margin-right: 0;
+    margin-bottom: 4px;
+  }
+  .center-wrapper .products .products-content-container {
+    padding: 0;
+  }
+  .center-wrapper .products .products-content-container .products-row .product img {
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+  }
 }
 /*Ipad Landscape */
 /*Ipad Portrait*/
@@ -656,7 +611,7 @@ body {
     padding-left: 0;
   }
   .center-wrapper .bespoke .text-container-1 {
-    font-size: 25px !important;
+    font-size: 25px;
   }
   .center-wrapper .about .article-content .article-wrapper .article-inner {
     width: 100%;
@@ -669,6 +624,22 @@ body {
   }
   .center-wrapper .about .article-content .icons .icons-wrapper .icons-inner .icons-paragraph p {
     margin-bottom: 25px;
+  }
+  .center-wrapper .products .products-content-container .products-row .product {
+    margin: 0 20px;
+  }
+  .center-wrapper .products .products-content-container .products-row .product .name {
+    font-size: 15px;
+  }
+  .center-wrapper .gallery .gallery-content-container {
+    margin: 100px 10px;
+  }
+  .center-wrapper .gallery .gallery-content-container .gallery-row a img {
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
   }
   .center-wrapper .call-to-action .download-wrapper,
   .center-wrapper .call-to-action .mail-wrapper {
@@ -695,9 +666,6 @@ body {
   .center-wrapper .contact-form .contact-inner form .contact-subject #message {
     margin-top: 15px;
   }
-  .gallery .gallery-content-container:last-child {
-    margin-bottom: 50px !important;
-  }
   .footer .center-wrapper .footer-wrapper .footer-inner {
     flex-direction: column;
     align-items: center;
@@ -714,8 +682,24 @@ body {
 /* Extra Small Devices, Phones */
 /* Extra Small Devices, Phones */
 @media only screen and (max-width: 479px) {
+  .hero .center-wrapper .logo {
+    align-self: center;
+    justify-content: center;
+    width: 80%;
+    padding-top: 5px;
+  }
+  .hero .center-wrapper .logo img {
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+  }
   .center-wrapper {
     width: 100%;
+  }
+  .center-wrapper .navigation {
+    margin-bottom: 100px;
   }
   .center-wrapper .navigation ul {
     flex-direction: column;
@@ -753,9 +737,37 @@ body {
   .center-wrapper .navigation ul li:active {
     background-color: #333;
   }
+  .center-wrapper .bespoke .button-container {
+    font-size: 16px;
+    width: 290px;
+  }
   .center-wrapper .about .article-content .icons .icons-wrapper {
     flex-direction: column;
     margin-bottom: 100px;
+  }
+  .center-wrapper .about .article-content .icons .icons-wrapper .icons-inner {
+    align-items: center;
+  }
+  .center-wrapper .about .article-content .icons .icons-wrapper .icons-inner .icons-paragraph {
+    padding: 0;
+  }
+  .center-wrapper .about .article-content .icons .icons-wrapper .icons-inner .icon-image img {
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    margin: 0 auto;
+  }
+  .center-wrapper .products {
+    margin-bottom: 100px;
+  }
+  .center-wrapper .products .products-content-container .products-row {
+    flex-direction: column;
+    margin-top: 0;
+  }
+  .center-wrapper .products .products-content-container .products-row .product {
+    margin-top: 30px;
   }
   .center-wrapper .call-to-action a .button-link {
     font-size: 16px;
@@ -774,41 +786,68 @@ body {
 }
 /* Custom, iPhone Retina */
 @media only screen and (max-width: 320px) {
-  .center-wrapper .about .article-content h1 {
-    font-size: 28px;
+  h1 {
+    font-size: 22px;
+  }
+  .title span {
+    padding: 0 10px;
+  }
+  .center-wrapper .bespoke .logo-container {
+    padding: 0 10px;
+  }
+  .center-wrapper .bespoke .logo-container img {
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+  }
+  .center-wrapper .bespoke .text-container-1 {
+    font-size: 20px;
+  }
+  .center-wrapper .bespoke .button-container {
+    font-size: 13px;
+    width: 130px;
+    text-align: center;
+  }
+  .center-wrapper .bespoke .text-container-2 {
+    font-size: 12px;
+    text-align: center;
   }
   .center-wrapper .about .article-content .article-wrapper {
     margin-top: 40px;
   }
   .center-wrapper .about .article-content .article-wrapper .article-inner {
-    padding-bottom: 20px;
+    padding: 0 5px 20px;
   }
   .center-wrapper .about .article-content .article-wrapper .article-inner h3 {
-    font-size: 20px;
+    font-size: 14px;
     margin-bottom: 25px;
   }
   .center-wrapper .about .article-content .article-wrapper .article-inner p {
-    font-size: 16px;
+    font-size: 12px;
     margin: 0;
   }
   .center-wrapper .about .article-content .icons .icons-wrapper {
     padding: 0;
   }
+  .center-wrapper .about .article-content .icons .icons-wrapper .icons-inner .icons-paragraph {
+    width: 70%;
+  }
   .center-wrapper .about .article-content .icons .icons-wrapper .icons-inner .icons-paragraph p {
-    font-size: 16px;
+    font-size: 14px;
+  }
+  .center-wrapper .about .article-content .icons .icons-wrapper .icons-inner .icon-image {
+    width: 70%;
   }
   .center-wrapper .call-to-action a .button-link {
-    font-size: 14px;
-    width: 165px;
+    font-size: 13px;
+    width: 130px;
     text-align: center;
   }
   .center-wrapper .contact-form .contact-title h1 {
     display: flex;
     justify-content: center;
-    font-size: 22px;
-  }
-  .center-wrapper .contact-form .contact-title .title span {
-    padding: 0 10px;
   }
   .center-wrapper .contact-form .contact-title p {
     font-size: 16px;
